@@ -4,18 +4,20 @@ import java.util.Scanner;
 
 public class Searcher {
 
-	private String[] names = { "kartik", "sajal", "deepak", "raghav", "gaurav" };
+	private String[] names;
 
 	public Searcher(String[] names) {
 		super();
-		if (names.length > 4)
+		if (names.length >= 4)
 			this.names = names;
 	}
 
 	public void doSearch(String key) {
-		for (String str : names) {
-			if (key.equals(names))
+		for (int i = 0; i < names.length; i++) {
+			if (key != null && names.length >= 4)
 				System.out.println("name found");
+			else
+				System.out.println("not found");
 		}
 
 	}
