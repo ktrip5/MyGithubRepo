@@ -11,7 +11,19 @@ public class NewSearcher extends Searcher {
 
 	}
 
+	public NewSearcher(int[] nos) {
+		super();
+
+	}
+
+	public NewSearcher(String[] names, int[] nos) {
+		super(names);
+		this.nos = nos;
+	}
+
 	public void doSearch(String key) {
+		
+		
 
 	}
 

@@ -6,6 +6,10 @@ public class Searcher {
 
 	private String[] names;
 
+	public Searcher() {
+		super();
+	}
+
 	public Searcher(String[] names) {
 		super();
 		if (names.length >= 4)
