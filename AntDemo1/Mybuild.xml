@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<project name="hello" default="init" basedir=".">
+	<property name="svar" location="src" />
+	<property name="cvsr" location="classes" />
+	<target name="clean" description="remove folder">
+		<delete dir="${cvar}" />
+		<echo>delete the previous directory</echo>
+	</target>
+	<target name="init" description="create folder" depends="clean">
+		<echo>initializes after clean target </echo>
+		<mkdir dir="${cvar}" />
+
+	</target>
+	<target name="compile" description="compile java classes " depends="init">
+		<javac srcdir="${svar}" destdir="${cvar}">
+		</javac>
+		<echo>code compiled</echo>
+	</target>
+	<target name="run">
+		<java dir="${cvar}" classname="com.sapient.beans.HelloAWorld" fork="true">
+		</java>
+	</target>
+</project>

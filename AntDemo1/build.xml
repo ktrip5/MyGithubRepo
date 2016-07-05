@@ -1,0 +1,17 @@
+<project name="hello" default="info" >
+
+	
+	
+	
+	<target name="info" description="display info" >
+	   <echo>Hello world</echo>
+	</target>
+	
+	<target name="info2" description="display info" >
+	   <echo>welcome</echo>
+	</target>
+	
+	
+</project>
+
+
