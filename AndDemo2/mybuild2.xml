@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<project name="hello" default="compile" basedir=".">
+
+	<!-- <property name="svar" location="src" />
+	<property name="cvar" location="classes" />
+	<property name="dvar" location="dist" />
+ -->
+
+	<property file="sap.properties" />
+	<target name="clean" description="remove folders">
+		<delete dir="${cvar}" />
+		<delete dir="${jvar}" />
+		<delete dir="${dvar}" />
+	</target>
+
+	<target name="init" description="create folders" depends="clean">
+		<mkdir dir="${cvar}" />
+		<mkdir dir="${dvar}" />
+	</target>
+	<target name="compile" description="compile java classes of src" depends="init">
+		<javac srcdir="${svar}" destdir="${cvar}" />
+	</target>
+	<target name="package" depends="compile">
+		<jar jarfile="${jvar}/hello.jar" basedir="${cvar}">
+			<manifest>
+				<attribute name="Main-Class" value="com.sapient.beans.HelloWorld" />
+			</manifest>
+		</jar>
+	</target>
+	<target name="run">
+		<java jar="${jvar}/hello.jar" fork="true" />
+	</target>
+
+	<target name="jdoc">
+		<javadoc packagenames="com.*" sourcepath="${svar}" destdir="${dvar}" version="true" windowtitle="Ant demo">
+
+			<doctitle>
+				Ant Demo
+			</doctitle>
+
+			<bottom>
+				Copyright 
+			</bottom>
+
+
+		</javadoc>
+
+		<echo message="java doc has been generated!" />
+	</target>
+</project>
