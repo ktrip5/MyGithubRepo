@@ -1,5 +1,6 @@
 package com.sapient.vo;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
@@ -10,6 +11,7 @@ import java.util.Date;
  */
 
 public class Emp implements Comparable<Emp> {
+	public static SimpleDateFormat sdf = new SimpleDateFormat("dd-MMM-yyyy");
 	private int empID;
 	private String empName;
 	private double empsal;
@@ -19,6 +21,15 @@ public class Emp implements Comparable<Emp> {
 	/* good practice by doing no argument constructor */
 	public Emp() {
 
+	}
+
+	public Emp(int empID, String empName, double empsal, String dept, Date doj) {
+		super();
+		this.empID = empID;
+		this.empName = empName;
+		this.empsal = empsal;
+		this.dept = dept;
+		this.doj = doj;
 	}
 
 	/**
@@ -106,7 +117,7 @@ public class Emp implements Comparable<Emp> {
 	@Override
 	public String toString() {
 
-		return empID + " " + empName + " " + empsal + " " + dept + " " + doj;
+		return empID + " " + empName + " " + empsal + " " + dept + " " + sdf.format(doj);
 	}
 
 	/*
@@ -115,9 +126,10 @@ public class Emp implements Comparable<Emp> {
 	 * hasCode methods
 	 */
 	@Override
-	public boolean equals(Object arg0) {
-		Emp emp = new Emp();
-		if (this.empID == emp.empID)
+	public boolean equals(Object obj) {
+		Emp emp = (Emp) obj;
+		if (this.empID == emp.empID && this.empName.equals(emp.empName) && this.empsal == emp.empsal
+				&& this.dept.equals(emp.dept) && this.doj.compareTo(emp.doj) == 0)
 			return true;
 		else
 			return false;
