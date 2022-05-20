@@ -1,0 +1,54 @@
+{
+    "FilterCriteria": {
+        "OrderTo": "20220311 063014.429",
+        "OrderFrom": "20220308 063014.429",
+        "customer_number": "DP13024",
+        "Order_Headers": [
+            {
+                "Details": {
+                    "OrganizationId": "INPROUK",
+                    "order_number": "MK00004762",
+                    "order_date": "20220310 111816.000",
+                    "customer_po": "Test10March UK",
+                    "order_status": "Open",
+                    "original_system_reference": "00027001",
+                    "sold_to_customer": "DP13024",
+                    "number_of_ordered_items": "1",
+                    "currency": "GBP",
+                    "ship_to": {
+                        "customer_name": "DP13024",
+                        "customer_account": "DP13024",
+                        "Address": {
+                            "street_address1": "91 Thirsk Road",
+                            "City": "Blandford Forum",
+                            "ZipCode": "DT11 6JH",
+                            "Country": "GB",
+                            "LocationName": "UK Same 10March"
+                        }
+                    },
+                    "invoice_to": {
+                        "customer_name": "DP13024",
+                        "customer_account": "DP13024",
+                        "Address": {
+                            "street_address1": "91 Thirsk Road",
+                            "City": "Blandford Forum",
+                            "ZipCode": "DT11 6JH",
+                            "Country": "GB"
+                        }
+                    },
+                    "order_subtotal": "227.00",
+                    "order_tax": "45.40",
+                    "order_charges": "25.00",
+                    "order_total": "297.40",
+                    "sales_order_ack_file": "Y",
+                    "shipping_method": "UPS Express Prepaid & Add"
+                },
+                "Documents": {
+                    "soa_url": [
+                        "https://apitest.dovercorporation.com/inproseal/documents/rest/INPROUK/ord/MK00004762"
+                    ]
+                }
+            }
+        ]
+    }
+}

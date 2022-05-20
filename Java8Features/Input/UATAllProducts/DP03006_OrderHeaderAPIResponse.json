@@ -1,0 +1,47 @@
+    {
+                "Details": {
+                    "OrganizationId": "INPROUK",
+                    "order_number": "MK00004758",
+                    "order_date": "20220309 204023.000",
+                    "customer_po": "9.0.923_09-Mar_20:35:01",
+                    "order_status": "Open",
+                    "original_system_reference": "00026961",
+                    "sold_to_customer": "DP03006",
+                    "number_of_ordered_items": "3",
+                    "currency": "GBP",
+                    "ship_to": {
+                        "customer_name": "DP03006",
+                        "customer_account": "DP03006",
+                        "Address": {
+                            "street_address1": "UNIT 5 YORKS PARK",
+                            "street_address2": "BLOWERS GREEN ROAD",
+                            "City": "DUDLEY",
+                            "ZipCode": "DY2 BUL",
+                            "Country": "GB",
+                            "LocationName": "ERIKS DUDLEY DC"
+                        }
+                    },
+                    "invoice_to": {
+                        "customer_name": "DP03006",
+                        "customer_account": "DP03006",
+                        "Address": {
+                            "street_address1": "AMBER WAY",
+                            "City": "HALESOWEN",
+                            "ZipCode": "B62 8WG",
+                            "Country": "GB"
+                        }
+                    },
+                    "order_subtotal": "9426.00",
+                    "order_tax": "1885.20",
+                    "order_charges": "62.50",
+                    "order_total": "11373.70",
+                    "payment_terms": "INPROUK~N30",
+                    "sales_order_ack_file": "Y",
+                    "shipping_method": "DHL International Express"
+                },
+                "Documents": {
+                    "soa_url": [
+                        "https://apitest.dovercorporation.com/inproseal/documents/rest/INPROUK/ord/MK00004758"
+                    ]
+                }
+            }

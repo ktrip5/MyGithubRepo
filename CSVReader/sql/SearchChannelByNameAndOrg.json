@@ -1,0 +1,32 @@
+{
+	"name": "SearchChannelByNameAndOrg",
+	"query": {
+		"conditions": [
+			{
+				"position":0,
+				"q": "select * from channel where organization_uuid = '{orgID}'"
+			},
+			{
+				"position":1,
+				"rules":[
+					{
+						"name":"NotEmpty",
+						"value":"name"
+					}
+				],
+				"q": "and name like '%{name}%'"
+			}
+		],
+		"params": [
+			{
+				"name": "name",
+				"value": "",
+				"optional": true
+			},
+			{
+				"name": "orgID",
+				"value": ""
+			}
+		]
+	}
+}
